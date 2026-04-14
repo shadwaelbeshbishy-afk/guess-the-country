@@ -2,19 +2,7 @@ import random
 import streamlit as st
 
 
-st.markdown(f"""
-<div style="
-    background-color: #1f1f1f;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 10px;
-    color: white;
-    font-size: 16px;
-    border-left: 4px solid #4CAF50;
-">
-    🤖 <b>Answer:</b> {response}
-</div>
-""", unsafe_allow_html=True)
+
 
 countries = {
     "Egypt": {"capital": "Cairo", "language": "Arabic", "currency": "EGP", "continent": "Africa", "famous_for": "Pyramids"},
