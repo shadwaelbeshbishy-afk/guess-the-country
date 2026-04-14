@@ -1,45 +1,6 @@
 import random
 import streamlit as st
 
-st.markdown("""
-<style>
-    .stButton>button {
-        width: 100%;
-        height: 40px;
-        border-radius: 8px;
-        border: none;
-        padding: 8px 16px;
-    }
-
-    .stButton>button:hover {
-        background-color: #2ea043;
-    }
-
-    .stTextInput input {
-        background-color: #161b22;
-        color: white;
-        border: 1px solid #30363d;
-        border-radius: 8px;
-    }
-
-    .chat {
-        padding: 8px 12px;
-        border-radius: 8px;
-        margin-bottom: 6px;
-        font-size: 14px;
-    }
-
-    .user {
-        background-color: #238636;
-        text-align: right;
-    }
-
-    .bot {
-        background-color: #161b22;
-    }
-</style>
-""", unsafe_allow_html=True)
-
 
 countries = {
     "Egypt": {"capital": "Cairo", "language": "Arabic", "currency": "EGP", "continent": "Africa", "famous_for": "Pyramids"},
@@ -121,7 +82,7 @@ info = st.session_state.info
 
 st.title("🎮 Guess The Country Game")
 
-question = st.text_input("Ask a question")
+question = st.text_input("Ask a question (capital/currency/continent/language/famous_for")
 
 if st.button("Send") and not st.session_state.game_over:
     q = question.lower()
